@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="/index.html">Back</a>
-    </nav>
-    <div class="container">
-        <h2>Simple Interest</h2>
-        <img src="/images/simple-interest.png" alt="simple-interest-formula">
-
-        <div class="form-group">
-            <label for="principal">Principal (₱):</label>
-            <input type="number" id="principal" required>
-        </div>
-
-        <div class="form-group">
-            <label for="rate">Interest Rate in % (R):</label>
-            <input type="number" id="rate" step="0.01" required>
-        </div>
-
-        <div class="form-group">
-            <label for="time">Time in Years (T):</label>
-            <input type="number" id="time" required>
-        </div>
-
-        <button onclick="calculateSI()">Calculate</button>
-
-        <div class="result" id="result" style="display:none;"></div>     
+    <div class="container-left">
+        <nav>
+            <a href="/index.html">Back</a>
+            <hr>
+        </nav>
+        <div class="container">
+            <h2>Simple Interest</h2>
+    
+            <div class="form-group">
+                <label for="principal">Principal (₱):</label>
+                <input type="number" id="principal" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="rate">Interest Rate in % (R):</label>
+                <input type="number" id="rate" step="0.01" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="time">Time in Years (T):</label>
+                <input type="number" id="time" required>
+            </div>
+    
+            <button onclick="calculateSI()">Calculate</button>
+    
+            <div class="result" id="result"></div>     
+        </div> 
     </div>
 
+    </div>
     <script src="/scripts/simple-interest.js"></script>
 </body>
 </html>

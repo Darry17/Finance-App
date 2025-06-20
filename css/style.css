@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     --primary: #2e86de;
     --secondary: #1b4f72;
@@ -5,36 +10,53 @@
     --background: #f8f9fa;
 }
 
-nav a {
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    display: flex;
-}
-
-nav a:hover {
-    background-color: var(--secondary);
-    color: var(--background);
-}
-
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background);
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+}
+
+.container-left {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+}
+
+.container-right{
+    line-height: normal;
+}
+
+.result ul li{
+    list-style: none;
+    padding: 10px;
 }
 
 .container {
     width: 100%;
     max-width: 500px;
-    padding: 20px;  
+    padding: 20px;
     box-sizing: border-box;
+}
+
+nav a {
+    color: var(--primary);
+    padding: 10px 20px;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+    display: flex;
+}
+
+hr {
+    height: 0.1px;
+    border-color: var(--primary);
 }
 
 h2 {
@@ -61,52 +83,92 @@ label {
 }
 
 input[type="number"] {
-    display: block;
-    width: 100%;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding-left: 10px;
-    padding: 5px 0px 5px 5px;
+    padding: 5px 0px 5px 10px;
 }
 
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #2e86de;
+    background-color: var(--primary);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b4f72;
 }
 
 .result {
     margin-top: 30px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
-
+    background-color: #fff;
+    color: var(--primary);
+    min-height: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
-.result {
+.result.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.result h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
     color: var(--primary);
 }
 
 .result .given {
+    margin-bottom: 15px;
     color: var(--secondary);
-    font-size: 0.8rem;
-    padding-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .result .step {
     color: var(--secondary);
-    margin-top: 40px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.explanation {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-left: 5px solid var(--primary);
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.explanation h3 {
+    margin-top: 0;
+    color: var(--primary);
 }
 
 @media (min-width: 700px) {
     button {
         width: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    img {
+        width: 200px;
+        height: auto;
     }
 }

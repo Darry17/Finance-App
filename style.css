@@ -32,30 +32,57 @@ header p {
     margin-bottom: 30px;
 }
 
+.content {
+    display: flex;
+}
+
 .calculator-list {
     list-style: none;
     padding: 0;
-}
-
-.calculator-list li {
-    margin: 15px 0;
-}
-
-.calculator-list li:last-child {
-    padding-bottom: 10px;
+    display: inline-block;
+    flex-direction: column;
 }
 
 .calc-button {
     display: inline-block;
-    background-color: var(--primary);
-    color: #fff;
+    color: var(--primary);
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 1rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+.calculator-list li {
+    display: flex;
+}
+
+.collapsible {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
-.calc-button:hover {
+.collapsible:hover {
     background-color: var(--secondary);
 }
+
+.collapsible.active {
+    background-color: var(--secondary);
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+

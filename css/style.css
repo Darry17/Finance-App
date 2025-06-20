@@ -46,6 +46,10 @@ body {
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+}
+
 nav a {
     color: var(--primary);
     padding: 10px 20px;
@@ -171,4 +175,5 @@ button:hover {
         width: 200px;
         height: auto;
     }
+
 }

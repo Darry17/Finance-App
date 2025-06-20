@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compound Interest</title>
+    <title>Continuous Compound Interest</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <hr>
     </div>
     <div class="container">
-        <h2>Compound Interest</h2>
+        <h2>Continuous Compound Interest</h2>
         <div class="form-group">
             <label for="principal">Principal (₱):</label>
             <input type="number" id="principal" step="0.01" min="0" required>
@@ -27,9 +27,9 @@
             <label for="time">Time in Years (T):</label>
             <input type="number" id="time" step="1" min="0" required>
         </div>
-        <button onclick="calculateCI()">Calculate</button>
+        <button onclick="calculateCCI()">Calculate</button>
         <div id="result" class="result"></div>
     </div>
-    <script src="/scripts/compound-interest.js"></script>
+    <script src="/scripts/continuous-compound-interest.js"></script>
 </body>
 </html>

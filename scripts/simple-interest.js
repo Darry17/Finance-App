@@ -43,7 +43,7 @@ function calculateSI() {
         ${steps}
         <div class="explanation">
             <h3>Explanation:</h3>
-            <img src="/images/simple-interest.png" alt="simple-interest-formula"><br>
+            <img src="/images/simple-interest.png" alt="simple-interest-formula">
             Simple Interest (SI) is the extra money you earn or pay when you borrow or invest over time. 
             It is calculated using the formula: <strong>SI = (Principal × Rate × Time) / 100</strong>.
             <ul>

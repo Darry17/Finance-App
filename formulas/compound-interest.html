@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container-left">
+        <nav>
+            <a href="/index.html">Back</a>
+        </nav>
+        <hr>
+        <h2>Compound Interest</h2>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label for="principal">Principal (₱):</label>
+            <input type="number" id="principal" step="0.01" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="rate">Interest Rate in % (R):</label>
+            <input type="number" id="rate" step="0.01" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time in Years (T):</label>
+            <input type="number" id="time" step="1" min="0" required>
+        </div>
+        <button onclick="calculateCI()">Calculate</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="/scripts/compound-interest.js"></script>
+</body>
+</html>
